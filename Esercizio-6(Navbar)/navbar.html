@@ -9,7 +9,7 @@
     <title>Esercizio Navbar</title>
     <style>
         body { 
-            background-color:rgb(38, 33, 33) ;
+            background-color:rgb(38, 33, 33)
         }
         .navbar {
             display: flex;
@@ -29,11 +29,15 @@
             justify-content: flex-start;
             padding-left: 5px;
         }
-        
+        .color1{
+            color:rgb(110, 108, 108);
+        }
+        .disabled{
+            color: rgb(67, 67, 67);
+        }
         a{
             text-decoration: none;
             color: white;
-            display: inline-block;
             padding: 1px 8px;
         }    
         input[type="text"]{
@@ -78,9 +82,9 @@
         <ul class="nav-links">
             <li><a href="#">Navbar</a></li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Dropdown</a></li>
-            <li><a href="#">Disabled</a></li>    
+            <li><a class="color1" href="#">Link</a></li>
+            <li><a class="color1"href="#">Dropdown &#9660;</a></li>
+            <li><a class="disabled"href="#">Disabled</a></li>    
         </ul>
         <form action="/action_page.php">
             <label for="submit"></label>
@@ -88,7 +92,6 @@
             <button type="submit">Search</button>
         </form>
         <img src="assets/32px-Hamburger_icon.jpg" alt="Hamburger">
-    
     </div>
     
 </body>

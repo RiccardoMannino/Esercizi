@@ -1,0 +1,53 @@
+.contenitore{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-bottom: hidden;
+    border-right: hidden;
+    border-bottom: hidden;
+    border-radius: 3px;
+    max-width: 200px;
+    margin: 2em auto;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2)
+    }
+  .segni{
+    background-color: #bdcad4;
+    font-family: Consolas, 'monospace';
+    border-top: none;
+  }
+  input[type="button"]{
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid rgb(158, 186, 209);
+    font-family: Consolas, 'monospace';
+    }
+  .contenitore > button {
+    grid-area: 3 / 4 / 7 / 4;
+    background-color: rgb(223, 104, 104);
+    height: 100%;
+    border: 1px solid rgb(137, 157, 174);
+    border-radius: 0 0 3px 0;
+    border-right: hidden;
+    border-bottom: none;
+    }
+    input[type="text"]{
+    text-align: right;
+    background-color: rgb(53, 52, 52);
+    color: white;
+    padding-right: 5px;
+    grid-area: 1 / 1 / 2 / 5;
+    border-radius: 3px 3px 0 0;
+    border-bottom: none;
+    border: 1px solid rgb(53, 52, 52) ;
+    }
+    #border-left{
+      border-left: none;
+    }
+    #border0{
+      border-left: none;
+      border-bottom: none;
+    }
+    #bbottom{
+      border-bottom: none;
+    }

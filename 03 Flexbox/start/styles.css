@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+}
+aside{
+    border: solid 1px black;
+    width: 200px;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+   
+}
+ul{
+    list-style-type:none;
+    flex-grow: 1;
+    padding: 5px 0 0 10px;
+}
+a{
+    color: #2b2b2b;
+    text-decoration: none;
+}
+a:hover{
+    transition-delay: 0.3s;
+    color:#2b2bb2;
+}
+div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}

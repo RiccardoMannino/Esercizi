@@ -8,8 +8,6 @@ ul{
     grid-template-rows: 1fr 1fr;
     
 }
-
-
 #green {
    grid-area: 1 / 1 / 1 / 5;
 }

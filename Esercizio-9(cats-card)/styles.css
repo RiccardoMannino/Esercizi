@@ -84,11 +84,10 @@ span{
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (max-width: 576px) { 
+/* Small devices (landscape phones, 375px and up) */
+@media screen and (max-width: 375px) { 
     main{
         display: grid;
-        margin: 0;
     }
 #section1{
         grid-area: 1 / 1 / 1/ 1 ;

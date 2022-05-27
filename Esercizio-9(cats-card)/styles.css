@@ -84,7 +84,7 @@ span{
 }
 
 
-/* Small devices (landscape phones, 375px and up) */
+/* (Small devices, 375px and up) */
 @media screen and (max-width: 375px) { 
     main{
         display: grid;
@@ -101,7 +101,7 @@ span{
     }
  
 
-/* Medium devices (tablets, 768px and up) */
+/* (tablets, 768px and up) */
 @media screen and (max-width: 768px) { 
 
     main{
@@ -110,6 +110,4 @@ span{
         grid-template-rows: 1fr 1fr;
         
     }
-    
-
-}
+ }

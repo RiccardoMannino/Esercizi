@@ -1,0 +1,86 @@
+$color-red: red; 
+$color-green: green;
+$color-blue: blue;
+$border: 1px solid;
+
+@mixin articolo ($color, $width, $size, $font-color){
+    border: $width solid $color;
+    font-size: $size;
+    color: $font-color;
+}
+
+body {
+       width: 100vw;
+
+    div { 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border: $border $color-red;
+    
+        %text{
+        color: $color-green;
+        border-bottom: $border $color-blue;
+        border-width: 50%;
+    }
+    
+        .h1{
+            @extend %text;
+        }
+
+        &--h2{
+            @extend %text;
+            border:$border $color-red;
+            padding: 1rem;
+            
+        }
+    
+
+        
+        
+    section {
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        align-self: center;
+    
+    article{
+        display: flex;
+        align-items: center;
+        border: 1px solid $color-green;
+        height: 100%;
+        
+        &:nth-child(odd){
+            color: $color-blue;
+        }
+        &:nth-child(even) {
+          color: $color-red;
+        }
+        
+    }
+    
+    p{
+        margin: 30px 10px;
+    }
+    
+   }
+  }
+}
+section{
+    &:last-of-type{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px;
+    
+    article{
+        @include articolo ($color-green, 1px, 24px, $color-blue);
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+}

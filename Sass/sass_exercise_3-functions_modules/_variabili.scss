@@ -1,0 +1,10 @@
+$color-red: red; 
+$color-green: green;
+$color-blue: blue;
+$border: 1px solid;
+
+@mixin articolo ($color, $width, $size, $font-color){
+    border: $width solid $color;
+    font-size: $size;
+    color: $font-color;
+}

@@ -1,0 +1,56 @@
+body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid red;
+}
+
+body div h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+  border-width: 50%;
+}
+
+body div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+body div section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid green;
+  height: 100%;
+}
+
+body div section article:nth-child(odd) {
+  color: blue;
+}
+
+body div section article:nth-child(even) {
+  color: red;
+}
+
+body div section article p {
+  margin: 30px 10px;
+}
+/*# sourceMappingURL=style.css.map */

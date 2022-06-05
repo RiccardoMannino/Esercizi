@@ -1,0 +1,56 @@
+body {
+  width: 100vw;
+}
+body div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: 1px solid red;
+}
+body div h2, body div h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+  border-width: 50%;
+}
+body div h2 {
+  border: 1px solid red;
+  padding: 1rem;
+}
+body div section {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-self: center;
+}
+body div section article {
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+  height: 100%;
+}
+body div section article:nth-child(odd) {
+  color: blue;
+}
+body div section article:nth-child(even) {
+  color: red;
+}
+body div section p {
+  margin: 30px 10px;
+}
+
+section:last-of-type {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px;
+}
+section:last-of-type article {
+  border: 1px solid green;
+  font-size: 24px;
+  color: blue;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

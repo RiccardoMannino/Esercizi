@@ -1,0 +1,69 @@
+@use 'function' as f; 
+@use 'variabili' as v;
+
+
+
+body {
+       width: 100vw;
+
+    div { 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border: v.$border v.$color-red;
+    
+        h1 {
+        color: v.$color-green;
+        border-bottom: v.$border v.$color-blue;
+        border-width: 50%;
+        }
+        
+    section {
+        display: flex;
+        margin: f.pxToRem(10px);
+        justify-content: center;
+        align-self: center;
+    
+    article{
+        display: flex;
+        align-items: center;
+        border: f.pxToRem(1px) solid v.$color-green;
+        height: 100%;
+        
+        &:nth-child(odd){
+            color: v.$color-blue;
+        }
+        &:nth-child(even) {
+          color: v.$color-red;
+        }
+        
+    }
+    
+    p{
+        margin-top: f.pxToRem(30px);
+        margin-bottom: f.pxToRem(30px);
+        margin-left: f.pxToRem(10px);
+        margin-right: f.pxToRem(10px);
+    }
+    
+   }
+  }
+}
+section{
+    &:last-of-type{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: f.pxToRem(10px);
+    
+    article{
+        @include v.articolo( v.$color-green, f.pxToRem(1px), f.pxToRem(24px), v.$color-blue);
+        width: 100%;
+        margin: f.pxToRem(10px);
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+}

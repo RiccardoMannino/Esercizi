@@ -2,14 +2,15 @@
 @function random-hex(){
     $hex: '';
     $lista: 'a', 'b', 'c', 'd', 'e', 'f';
-    $numeri: 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9;
+    
+    //@for $i from 0 to 6 (se usassi il ciclo for)
     @while str-length($hex) < 6 { // promemoria personale str-length funzione integrata sass(lunghezza stringa)
-        $numeri: random(9);
+        $numeri: random(16) - 1; // 10
         @if $numeri > 9 {
-            $key: (random(6));
-            $numeri: nth($lista, $key); 
+            $calc: $numeri - 9; // 1
+            $numeri: nth($lista, $calc); // a 
         }
-        $hex: $hex+#{$numeri}
+        $hex: str-insert($hex, ("" + $numeri), 0);
     }
     @return unquote('#' + $hex)
 }

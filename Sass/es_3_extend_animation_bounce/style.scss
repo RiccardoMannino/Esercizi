@@ -1,0 +1,38 @@
+@use 'hex' as hex;
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin palla{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+@mixin bounce ($start: 0px, $distance: -30px, $duration:1s, $iteration: infinite, $name:'bounce'){
+    @keyframes bounce {
+        0% {transform: translateY($start);}
+        
+        40% {transform: translateY($distance);}
+
+        60% {transform: translateY(calc($distance / 2));}
+        
+        100%{transform: translateY($start);}
+        }
+    animation-duration: $duration;
+    animation-iteration-count:$iteration;
+    animation-name: $name;
+}
+.bg-random{
+    background-color: hex.random-hex();
+}
+.bounce{
+    @include bounce;
+    @include palla;
+    @extend .bg-random;
+ }
+  

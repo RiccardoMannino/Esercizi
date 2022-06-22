@@ -1,19 +1,19 @@
 function calculate() {
   let numero = 0;
   return operazioni = {
-    add :function somma(num) {
-         numero += num ;
+    add(num) {
+        numero += num ;
         return this ;
     },
-    multiply : function moltiplicazione(num){
+    multiply(num){
         numero *= num ;
         return this ;
     },
-    sub: function sottrazione(num){
+    sub(num){
         numero -= num ;
         return this ;
     },
-    divide: function divisione(num){
+    divide(num){
         numero /= num ;
         return this;
     },

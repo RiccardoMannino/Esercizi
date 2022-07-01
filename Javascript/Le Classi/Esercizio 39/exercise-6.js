@@ -22,12 +22,11 @@ class AreaCalculator {
   static calculate(values) {
     if(values === rectangle){ 
     return values.width * values.height ;
-  }else if(values === circle){
+  } else if(values === circle){
     return (Math.pow(values.radius,2) / Math.PI).toFixed(2) ; 
-  }else{
+  } else{
     return values.side * 4 ;
   }
-  
  }
 } 
 

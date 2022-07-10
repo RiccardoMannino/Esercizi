@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="container">
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+
+  let data;
+  
+  async function postSaver() {
+    try {
+      let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+      let data = await response.json();
+      const todos = document.querySelector(".todo-list");
+      for (const todo of data) {
+        const li = document.createElement("li");
+        li.textContent = todo.title;
+        todos.appendChild(li);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  postSaver();
+</script>

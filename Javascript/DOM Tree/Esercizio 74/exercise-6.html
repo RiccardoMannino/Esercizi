@@ -1,0 +1,74 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Code here
+  const form = document.querySelector("#person-form");
+  const bottone = document.querySelector("button");
+  
+  
+  function initform(){
+  const div = document.createElement("div");
+  const div2 = document.createElement("div");
+  const div3 = document.createElement("div");
+  const br = document.createElement("br");
+
+  form.append(div);
+
+  const firstName = document.createElement("label");
+  firstName.innerText = "First Name:";
+  div.append(firstName);
+
+  const input = document.createElement("input");
+  input.setAttribute("type", "text");
+  input.setAttribute("placeholder", "First Name");
+  div.append(input);
+
+  form.append(div2);
+
+  const lastName = document.createElement("label");
+  lastName.innerText = "Last Name:";
+  form.append(lastName);
+
+  const input2 = document.createElement("input");
+  input2.setAttribute("type", "text");
+  input2.setAttribute("placeholder", "Last Name");
+  form.append(input2);
+
+  form.append(div3);
+
+  const age = document.createElement("label");
+  age.innerText = "Age:";
+  form.append(age);
+
+  const input3 = document.createElement("input");
+  input3.setAttribute("type", "number");
+  input3.setAttribute("placeholder", "Age");
+  form.append(input3);
+
+  form.append(br);
+  
+  bottone.remove();
+  form.append(bottone);
+}
+window.addEventListener("load", initform)
+
+  form.addEventListener("submit", function submitPersonForm(e) {
+    e.preventDefault();
+    const person = {
+      firstName: "",
+      lastName: "",
+      age:"",
+    }
+    console.log(person)
+  })
+
+</script>

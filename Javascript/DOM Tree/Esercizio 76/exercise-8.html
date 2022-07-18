@@ -1,0 +1,32 @@
+POLISH RINNOVANTE<html>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // code here
+    const lista = document.querySelectorAll(".hero-list-item");
+
+    Object.keys(lista).forEach(i => {
+      lista[i].addEventListener("mouseover", function (e) {
+        e.target.style.color = "red";
+      });
+    });
+    
+    Object.keys(lista).forEach(i => {
+      lista[i].addEventListener("mouseout", function (e) {
+        e.target.style.color = "transparent";//oppure black?
+      });
+    });
+
+   
+  </script>
+</html>
